@@ -1,0 +1,20 @@
+# Updates the post with the specified project and post identifier.
+# Only projectId and postId are required.
+# Please please look at our GraphQL Schema documentation to discover what are
+# the fields which are available:
+# https://graphdoc.noticeable.io
+mutation {
+    updatePost(
+        input:{
+            projectId: "YOUR_PROJECT_ID"
+            postId: "YOUR_POST_ID"
+            title: "Your new title!"
+            content: "New content goes here."
+        }
+    ) {
+        post {
+            permalink
+            updatedAt
+        }
+    }
+}

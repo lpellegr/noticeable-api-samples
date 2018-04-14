@@ -1,0 +1,31 @@
+# Fetches post data identified by a given project and post identifier.
+query {
+    post(projectId: "YOUR_PROJECT_ID" postId: "YOUR_POST_ID") {
+        author {
+            fullName
+            jobTitle
+        }
+        content {
+            html
+            htmlEscaped
+            markdown
+            plaintext
+        }
+        createdAt
+        excerpt
+        forwardToWebhooks
+        id
+        isDraft
+        labels {
+            color
+            name
+            slug
+        }
+        permalink
+        publicationTime
+        segments
+        slug
+        title
+        updatedAt
+    }
+}

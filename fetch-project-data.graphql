@@ -1,0 +1,90 @@
+# Fetches project data for a given project identifier.
+# You must replace YOUR_PROJECT_ID by your own value.
+# Please also note that a lot of fields are returned for demonstration purpose.
+# However, in a real use case you should only return the fields you need.
+# This has the benefit to reduce the bandwidth consumption and response time.
+query {
+    project(id: "YOUR_PROJECT_ID") {
+        accentColor
+        createdAt
+        id
+        labels {
+            color
+            name
+            slug
+        }
+        logoUrl
+        name
+        timeline {
+            allowCrawlers
+            collectSubscriptions
+            customDomain {
+                name
+                verified
+            }
+            email
+            googleAnalyticsKey
+            socialAccounts {
+                facebook {
+                    url
+                }
+                linkedin {
+                    url
+                }
+                twitter {
+                    url
+                }
+            }
+            subtitle
+            texts {
+                footerPoweredByLink
+                footerRssFeedsLink
+                formSubscribeBackToPosts
+                formSubscribeButton
+                formSubscribeDescription
+                formSubscribeDoneMessage
+                formSubscribeInputPlaceholder
+                formSubscribeTitle
+                headerSubscribeButton
+                menuAllPostsLink
+                pageBackLink
+                pageNoPostsFoundDescription
+                pageNoPostsFoundTitle
+                pagePostDetailsPostedBy
+                pagePostsListWrittenByNoJobTitle
+                pagePostsListWrittenByWithJobTitle
+                pageShareOnFacebook
+                pageShareOnTwitter
+                paginationNewerPostsButton
+                paginationOlderPostsButton
+            }
+            title
+            useWhiteLabel
+        }
+        url
+        widget {
+            autoRefresh
+            closeOnEscKey
+            closeOnOutsideClick
+            fetchLimit
+            markAsSeenAfter
+            opened
+            popup {
+                header
+                footer
+            }
+            postExcerptMaxLength
+            postExcerptTarget
+            texts {
+                postViewMoreButton
+            }
+            trigger {
+                displayAfter
+                displayCounter
+                useEyeCatching
+                useSoftHide
+            }
+            useWhiteLabel
+        }
+    }
+}

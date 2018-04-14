@@ -1,0 +1,28 @@
+# Fetches the first 10 projects data which are accessible
+# with the Access Token used to perform the request
+query {
+    viewer {
+        id
+        projects(first: 10) {
+            pageInfo {
+                hasNextPage
+            }
+            edges {
+                node{
+                    id
+                    createdAt
+                    name
+                    posts(last: 5) {
+                        edges {
+                            node {
+                                id
+                                publicationTime
+                                title
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

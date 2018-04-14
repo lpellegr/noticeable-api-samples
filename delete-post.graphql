@@ -1,0 +1,16 @@
+# Deletes the post that is identified by the given project and post identifiers.
+# In case of success, you can receive information about the post which has been deleted.
+mutation {
+    deletePost(
+        input: {
+            projectId: "YOUR_PROJECT_ID"
+            postId: "YOUR_POST_ID"
+        }
+    ) {
+        post {
+            id
+            permalink
+            title
+        }
+    }
+}

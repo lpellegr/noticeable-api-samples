@@ -1,0 +1,34 @@
+# Fetches project data along with the last 10 published
+# and not segmented posts for a given project identifier.
+# You must replace YOUR_PROJECT_ID by your own value.
+# For readability reasons, not all field are returned.
+# If you need to fetch more information about a project or a post,
+# please look at our GraphQL Schema documentation to discover what are
+# the fields which are available:
+# https://graphdoc.noticeable.io
+query {
+    project(id: "YOUR_PROJECT_ID") {
+        logoUrl
+        name
+        posts(before: "now" last: 10 isDraft: false) {
+            pageInfo {
+                endCursor
+                hasNextPage
+                hasPreviousPage
+                startCursor
+            }
+            edges {
+                cursor
+                node {
+                    id
+                    content {
+                        html
+                    }
+                    permalink
+                    publicationTime
+                    title
+                }
+            }
+        }
+    }
+}

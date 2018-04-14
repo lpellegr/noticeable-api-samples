@@ -1,0 +1,25 @@
+# Creates a new post in the specified project.
+# Not all input or output field are required. To discover what fields
+# are available, please look at our GraphQL Schema documentation:
+# https://graphdoc.noticeable.io
+mutation {
+    createPost(
+        input: {
+            projectId: "YOUR_PROJECT_ID",
+            author: {
+                fullName: "John Doe"
+            },
+            content: "Your post content (markdown supported).",
+            forwardToWebhooks: false,
+            isDraft: false,
+            labels: [{color: "#1bb142", name: "New Feature", slug: "new-feature"}],
+            publicationTime: "2018-04-16T20:24:46Z",
+            title: "Your post title"
+        }
+    ) {
+        post {
+            id
+            permalink
+        }
+    }
+}
