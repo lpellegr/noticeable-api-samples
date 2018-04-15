@@ -29,7 +29,7 @@ Here is a well-formatted GET request to our API using cURL:
 ```bash
 curl --header "Authorization: Apikey YOUR_ACCESS_TOKEN" \
      --get https://api.noticeable.io/graphql \
-     --data-urlencode "query=YOUR_QUERY_DATA"
+     --data-urlencode "query=YOUR_GRAPHQL_PAYLOAD"
 ```
 
 In the above command `YOUR_ACCESS_TOKEN` and `YOUR_GRAPHQL_PAYLOAD` must be replaced by your own values:
