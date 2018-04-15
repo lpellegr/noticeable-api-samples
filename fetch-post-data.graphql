@@ -1,4 +1,5 @@
 # Fetches post data identified by a given project and post identifier.
+# You must replace YOUR_PROJECT_ID and YOUR_POST_ID by your own values.
 query {
     post(projectId: "YOUR_PROJECT_ID" postId: "YOUR_POST_ID") {
         author {

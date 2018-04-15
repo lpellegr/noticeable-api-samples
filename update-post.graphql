@@ -1,7 +1,8 @@
 # Updates the post with the specified project and post identifier.
-# Only projectId and postId are required.
-# Please please look at our GraphQL Schema documentation to discover what are
-# the fields which are available:
+# You must replace YOUR_PROJECT_ID and YOUR_POST_ID by your own values.
+# Only projectId and postId arguments are required.
+# Also, not all available arguments are used in this example.
+# Please please look at our GraphQL Schema documentation for more information:
 # https://graphdoc.noticeable.io
 mutation {
     updatePost(

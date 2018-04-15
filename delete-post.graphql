@@ -1,5 +1,6 @@
 # Deletes the post that is identified by the given project and post identifiers.
-# In case of success, you can receive information about the post which has been deleted.
+# You must replace YOUR_PROJECT_ID and YOUR_POST_ID by your own values.
+# In case of success, you can retrieve information about the post which has been deleted.
 mutation {
     deletePost(
         input: {

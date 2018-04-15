@@ -1,6 +1,7 @@
 # Creates a new post in the specified project.
-# Not all input or output field are required. To discover what fields
-# are available, please look at our GraphQL Schema documentation:
+# You must replace YOUR_PROJECT_ID by your own value.
+# Not all arguments and fields are required.
+# Please look at our GraphQL Schema documentation for more information:
 # https://graphdoc.noticeable.io
 mutation {
     createPost(

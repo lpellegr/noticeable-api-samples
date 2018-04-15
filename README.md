@@ -34,8 +34,8 @@ curl --header "Authorization: Apikey YOUR_ACCESS_TOKEN" \
 
 In the above command `YOUR_ACCESS_TOKEN` and `YOUR_GRAPHQL_PAYLOAD` must be replaced by your own values:
 
-- `YOUR_ACCESS_TOKEN`: As a project owner, you can create or retrieve one [from your dashboard](https://noticeable.io/api/tokens).
-- `YOUR_GRAPHQL_PAYLOAD`: Your GraphQL payload. For instance, the content from one of the `.graphql` files provided in this repository.
+- `YOUR_ACCESS_TOKEN`: As a project owner, you can create or retrieve an Access Token [from your dashboard](https://noticeable.io/api/tokens).
+- `YOUR_GRAPHQL_PAYLOAD`: For instance, the content from one of the `.graphql` files provided in this repository (you need to escape double quotes inside double quotes).
 
 **Note**: GET requests have the benefit of hitting a powerful global Content Delivery Network (CDN) to make your requests 
 as fast as possible. However, updates to any data accessed by the API may take up to 5 minutes to propagate. 
@@ -44,22 +44,22 @@ For this reason, this is the recommended manner to consume the API with read ope
 
 #### POST requests
 
-A POST request accepts a JSON body. It must contain either a query or an operationName 
-(or both, in case of a named query), and may include variables.
+A POST request accepts a JSON body. It must contain either a _query_ or an _operationName_ 
+(or both, in case of a named query), and may include _variables_.
 
-Here's an example of a valid body for a POST request that fetches the same data as the GET request above:
+Here's an example of a valid POST request using cURL:
 
 ```bash
-curl --header "Content-Type: application/json" \
-     --header "Authorization: Apikey YOUR_ACCESS_TOKEN" \
+curl --header "Authorization: Apikey YOUR_ACCESS_TOKEN" \
+     --header "Content-Type: application/json" \
      --request POST https://api.noticeable.io/graphql \
      --data '{"query": "YOUR_GRAPHQL_PAYLOAD"}'
 ```
 
 In the above command `YOUR_ACCESS_TOKEN` and `YOUR_GRAPHQL_PAYLOAD` must be replaced by your own values:
 
-- `YOUR_ACCESS_TOKEN`: As a project owner, you can create or retrieve one [from your dashboard](https://noticeable.io/api/tokens).
-- `YOUR_GRAPHQL_PAYLOAD`: Your GraphQL payload. For instance, the content from one of the `.graphql` files provided in this repository.
+- `YOUR_ACCESS_TOKEN`: As a project owner, you can create or retrieve an Access Token [from your dashboard](https://noticeable.io/api/tokens).
+- `YOUR_GRAPHQL_PAYLOAD`: For instance, the content from one of the `.graphql` files provided in this repository (you need to escape double quotes inside double quotes).
 
 **Warning:** POST requests are never cached. As a consequence, every request counts against your API Calls quota.
 
