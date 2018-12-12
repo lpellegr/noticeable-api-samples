@@ -15,10 +15,8 @@ The endpoint remains constant no matter what operation you perform (query or mut
 
 The GraphQL API accepts both GET and POST requests.
 
-You can make HTTP requests with any clients. However, for testing purposes, we recommend using our explorer that 
-provides automatic completion, real-time error highlighting, intelligent type ahead and syntax highlighting:
-
-https://api.noticeable.io/graphiql?accessToken=YOUR_ACCESS_TOKEN
+You can make HTTP requests with any clients. For testing purposes, we recommend using our [Playground instance](https://api.noticeable.io/graphql). 
+It provides examples, automatic completion, real-time error highlighting, intelligent type ahead and syntax highlighting.
 
 #### GET requests
 
