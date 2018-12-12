@@ -1,7 +1,7 @@
 # Fetches the first 10 projects data which are accessible
 # with the Access Token used to perform the request
 query {
-    viewer {
+    organization {
         id
         projects(first: 10) {
             pageInfo {
